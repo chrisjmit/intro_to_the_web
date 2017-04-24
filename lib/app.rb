@@ -16,7 +16,13 @@ get '/radiator' do
   "Keeping the toes warm-ish"
 end
 
-get '/cat' do
+get '/random-cat' do
   @kitten = ["Amigo", "Oscar", "Viking", "Shady"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @kitten = params[:greeting]
   erb(:index)
 end
