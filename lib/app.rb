@@ -17,5 +17,6 @@ get '/radiator' do
 end
 
 get '/cat' do
+  @kitten = ["Amigo", "Oscar", "Viking", "Shady"].sample
   erb(:index)
 end
